@@ -1,0 +1,23 @@
+{
+  "name": "javascript-time-ago-type-gen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "tsc --watch code-gen.ts type-test.ts",
+    "gen": "tsc code-gen.ts && node code-gen.js",
+    "test-types": "tsc type-test.ts && node type-test.js"
+  },
+  "author": "Erik Burton",
+  "license": "Public Domain",
+  "dependencies": {
+    "javascript-time-ago": "^2.0.4",
+    "relative-time-format": "^0.1.3",
+    "shelljs": "^0.8.3"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.11",
+    "@types/shelljs": "^0.8.6"
+  }
+}
