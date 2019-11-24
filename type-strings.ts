@@ -1,5 +1,5 @@
 export const DURATION_TYPE_STR = `
-  interface Duration {
+interface Duration {
     year: Tense;
     quarter: Tense;
     month: Tense;
@@ -8,24 +8,24 @@ export const DURATION_TYPE_STR = `
     hour: Tense;
     minute: Tense;
     second: Tense;
-  }
+}
 `;
 
 export const TENSE_TYPE_STR = `
-  interface Tense {
+interface Tense {
     previous?: QuantifyType | string;
     current?: QuantifyType | string;
     next?: QuantifyType | string;
     past?: QuantifyType | string;
     future?: QuantifyType | string;
-  }
+}
 `
 
 export const QUANTIFY_TYPE_STR = `
-  interface QuantifyType {
+interface QuantifyType {
     one: string;
     two?: string;
     few?: string;
     other: string;
-  }
+}
 `
