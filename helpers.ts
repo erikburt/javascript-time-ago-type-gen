@@ -3,8 +3,9 @@ import { DURATION_TYPE_STR, TENSE_TYPE_STR, QUANTIFY_TYPE_STR } from "./type-str
 export function parseLocaleObjectToTypings(locale: Locale): string {
   const localeString = locale.locale;
 
-  const headerStr =
-    `declare module "javascript-time-ago/locale/${localeString}" {
+  const headerStr = `// Generated with https://github.com/erikburt/javascript-time-ago-type-gen
+
+declare module "javascript-time-ago/locale/${localeString}" {
   var ${locale.locale}: Locale;`
 
   const footerStr = `
@@ -28,11 +29,11 @@ function createLocaleInterfaceString(localeObj: Locale): string {
 
     if (key.indexOf("-") === -1) {
       localeInterfaceStr += `
-      ${key}: Duration;`
+    ${key}: Duration;`
     }
     else {
       localeInterfaceStr += `
-      "${key}": Duration;`
+    "${key}": Duration;`
     }
   });
 
