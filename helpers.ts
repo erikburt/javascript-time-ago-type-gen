@@ -9,7 +9,6 @@ declare const locale: Locale;`
 
     const footerStr = `
 export = locale;
-
 `;
 
     return headerStr + createLocaleInterfaceString(locale) + DURATION_TYPE_STR + TENSE_TYPE_STR + QUANTIFY_TYPE_STR + footerStr;
