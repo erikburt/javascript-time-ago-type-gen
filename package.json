@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "tsc --watch code-gen.ts type-test.ts",
     "gen": "tsc code-gen.ts && node code-gen.js",
-    "test-types": "tsc type-test.ts && node type-test.js"
+    "test:type": "tsc type-test.ts && node type-test.js"
   },
   "author": "Erik Burton",
   "license": "Public Domain",
