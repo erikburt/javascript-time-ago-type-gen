@@ -1,9 +1,11 @@
-import { DURATION_TYPE_STR, TENSE_TYPE_STR, QUANTIFY_TYPE_STR } from "./type-strings";
+import { IMPORT_STRING, TENSE_TYPE_STR, QUANTIFY_TYPE_STR } from "./type-strings";
 
 export function parseLocaleObjectToTypings(locale: Locale): string {
     const localeString = locale.locale;
 
     const headerStr = `// Generated with https://github.com/erikburt/javascript-time-ago-type-gen
+
+${IMPORT_STRING}
 
 declare const locale: Locale;`
 
@@ -11,7 +13,7 @@ declare const locale: Locale;`
 export = locale;
 `;
 
-    return headerStr + createLocaleInterfaceString(locale) + DURATION_TYPE_STR + TENSE_TYPE_STR + QUANTIFY_TYPE_STR + footerStr;
+    return headerStr + createLocaleInterfaceString(locale) + footerStr;
 }
 
 function createLocaleInterfaceString(localeObj: Locale): string {

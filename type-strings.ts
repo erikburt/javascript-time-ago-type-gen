@@ -1,3 +1,5 @@
+export const IMPORT_STRING = `import { Duration, QuantifyType } from "..";`
+
 export const DURATION_TYPE_STR = `
 interface Duration {
     year: Tense;
