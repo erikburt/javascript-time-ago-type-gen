@@ -1,5 +1,5 @@
 *.js
-types/javascript-time-ago/locale
+types/javascript-time-ago/locale/**/*
 
 # Logs
 logs
